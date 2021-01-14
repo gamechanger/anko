@@ -93,7 +93,7 @@ publishing {
     repositories {
         maven {
             def localProps = new Properties()
-            def localPropsFile = file("../../local.properties")
+            def localPropsFile = file("${project.rootDir}/local.properties")
 
             if (localPropsFile.exists()) {
                 localProps.load(new FileInputStream(localPropsFile))
