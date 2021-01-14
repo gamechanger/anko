@@ -91,7 +91,29 @@ publishing {
     }
 
     repositories {
-        maven { url "${rootProject.buildDir}/maven" }
+        maven {
+            def localProps = new Properties()
+            def localPropsFile = file("${project.rootDir}/local.properties")
+
+            if (localPropsFile.exists()) {
+                localProps.load(new FileInputStream(localPropsFile))
+            }
+
+            // Reads properties from command line args, then local properties, then defaults to nothing
+            def pullProperty = { String name, Properties prop ->
+                return project.findProperty(name) ?: prop[name] ?: ""
+            }
+
+            def publishUserName = pullProperty('github_user', localProps)
+            def publishPassword = pullProperty('github_oauth', localProps)
+
+            name = "GCAnko"
+            url = 'https://maven.pkg.github.com/gamechanger/anko'
+            credentials {
+                username = publishUserName
+                password = publishPassword
+            }
+        }
     }
 }
 
