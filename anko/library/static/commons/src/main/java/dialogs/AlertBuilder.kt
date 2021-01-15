@@ -21,13 +21,13 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.drawable.Drawable
-import android.support.annotation.DrawableRes
-import android.support.annotation.StringRes
 import android.view.KeyEvent
 import android.view.View
 import android.view.ViewManager
-import org.jetbrains.anko.internals.AnkoInternals.NO_GETTER
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import kotlin.DeprecationLevel.ERROR
+import org.jetbrains.anko.internals.AnkoInternals.NO_GETTER
 
 @SuppressLint("SupportAnnotationUsage")
 interface AlertBuilder<out D : DialogInterface> {

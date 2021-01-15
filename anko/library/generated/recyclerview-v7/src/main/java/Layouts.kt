@@ -4,9 +4,9 @@ package org.jetbrains.anko.recyclerview.v7
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.ViewGroup
-import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 
 open class _RecyclerView(ctx: Context): RecyclerView(ctx) {
 

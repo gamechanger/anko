@@ -4,16 +4,16 @@ package org.jetbrains.anko.design
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.support.design.widget.AppBarLayout
 import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.support.design.widget.BottomNavigationView
-import android.support.design.widget.CollapsingToolbarLayout
-import android.support.design.widget.CoordinatorLayout
-import android.support.design.widget.TabLayout
-import android.support.design.widget.TextInputLayout
+import android.widget.LinearLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.textfield.TextInputLayout
 
 open class _AppBarLayout(ctx: Context): AppBarLayout(ctx) {
 

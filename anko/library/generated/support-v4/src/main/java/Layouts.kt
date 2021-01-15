@@ -4,14 +4,15 @@ package org.jetbrains.anko.support.v4
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.support.v4.app.FragmentTabHost
-import android.view.View
-import android.support.v4.view.ViewPager
-import android.support.v4.widget.DrawerLayout
-import android.support.v4.widget.NestedScrollView
-import android.support.v4.widget.SlidingPaneLayout
+import androidx.core.widget.NestedScrollView
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTabHost
+import androidx.slidingpanelayout.widget.SlidingPaneLayout
+import androidx.viewpager.widget.ViewPager
+
 
 open class _FragmentTabHost(ctx: Context): FragmentTabHost(ctx) {
 

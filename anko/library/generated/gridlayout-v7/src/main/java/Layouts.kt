@@ -2,11 +2,11 @@
 package org.jetbrains.anko.gridlayout.v7
 
 
-import android.support.v7.widget.GridLayout
-import android.view.ViewGroup
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import android.view.ViewGroup
+import androidx.gridlayout.widget.GridLayout
 
 open class _GridLayout(ctx: Context): GridLayout(ctx) {
 

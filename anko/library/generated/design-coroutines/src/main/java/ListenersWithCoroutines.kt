@@ -3,15 +3,11 @@ package org.jetbrains.anko.design.coroutines
 
 
 import kotlin.coroutines.CoroutineContext
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.CoroutineStart
+import kotlinx.coroutines.*
 
-fun android.support.design.widget.AppBarLayout.onOffsetChanged(
+fun com.google.android.material.appbar.AppBarLayout.onOffsetChanged(
         context: CoroutineContext = Dispatchers.Main,
-        handler: suspend CoroutineScope.(appBarLayout: android.support.design.widget.AppBarLayout?, verticalOffset: Int) -> Unit
+        handler: suspend CoroutineScope.(appBarLayout: com.google.android.material.appbar.AppBarLayout?, verticalOffset: Int) -> Unit
 ) {
     addOnOffsetChangedListener { appBarLayout, verticalOffset ->
         GlobalScope.launch(context, CoroutineStart.DEFAULT) {
@@ -20,7 +16,7 @@ fun android.support.design.widget.AppBarLayout.onOffsetChanged(
     }
 }
 
-fun android.support.design.widget.TabLayout.onTabSelectedListener(
+fun com.google.android.material.tabs.TabLayout.onTabSelectedListener(
         context: CoroutineContext = Dispatchers.Main,
         init: __TabLayout_OnTabSelectedListener.() -> Unit
 ) {
@@ -29,12 +25,12 @@ fun android.support.design.widget.TabLayout.onTabSelectedListener(
     addOnTabSelectedListener(listener)
 }
 
-class __TabLayout_OnTabSelectedListener(private val context: CoroutineContext) : android.support.design.widget.TabLayout.OnTabSelectedListener {
+class __TabLayout_OnTabSelectedListener(private val context: CoroutineContext) : com.google.android.material.tabs.TabLayout.OnTabSelectedListener {
 
-    private var _onTabSelected: (suspend CoroutineScope.(android.support.design.widget.TabLayout.Tab?) -> Unit)? = null
+    private var _onTabSelected: (suspend CoroutineScope.(com.google.android.material.tabs.TabLayout.Tab?) -> Unit)? = null
     
 
-    override fun onTabSelected(tab: android.support.design.widget.TabLayout.Tab?) {
+    override fun onTabSelected(tab: com.google.android.material.tabs.TabLayout.Tab?) {
         val handler = _onTabSelected ?: return
         GlobalScope.launch(context) {
             handler(tab)
@@ -42,15 +38,15 @@ class __TabLayout_OnTabSelectedListener(private val context: CoroutineContext) :
     }
 
     fun onTabSelected(
-            listener: suspend CoroutineScope.(android.support.design.widget.TabLayout.Tab?) -> Unit
+            listener: suspend CoroutineScope.(com.google.android.material.tabs.TabLayout.Tab?) -> Unit
     ) {
         _onTabSelected = listener
     }
 
-    private var _onTabUnselected: (suspend CoroutineScope.(android.support.design.widget.TabLayout.Tab?) -> Unit)? = null
+    private var _onTabUnselected: (suspend CoroutineScope.(com.google.android.material.tabs.TabLayout.Tab?) -> Unit)? = null
     
 
-    override fun onTabUnselected(tab: android.support.design.widget.TabLayout.Tab?) {
+    override fun onTabUnselected(tab: com.google.android.material.tabs.TabLayout.Tab?) {
         val handler = _onTabUnselected ?: return
         GlobalScope.launch(context) {
             handler(tab)
@@ -58,15 +54,15 @@ class __TabLayout_OnTabSelectedListener(private val context: CoroutineContext) :
     }
 
     fun onTabUnselected(
-            listener: suspend CoroutineScope.(android.support.design.widget.TabLayout.Tab?) -> Unit
+            listener: suspend CoroutineScope.(com.google.android.material.tabs.TabLayout.Tab?) -> Unit
     ) {
         _onTabUnselected = listener
     }
 
-    private var _onTabReselected: (suspend CoroutineScope.(android.support.design.widget.TabLayout.Tab?) -> Unit)? = null
+    private var _onTabReselected: (suspend CoroutineScope.(com.google.android.material.tabs.TabLayout.Tab?) -> Unit)? = null
     
 
-    override fun onTabReselected(tab: android.support.design.widget.TabLayout.Tab?) {
+    override fun onTabReselected(tab: com.google.android.material.tabs.TabLayout.Tab?) {
         val handler = _onTabReselected ?: return
         GlobalScope.launch(context) {
             handler(tab)
@@ -74,12 +70,12 @@ class __TabLayout_OnTabSelectedListener(private val context: CoroutineContext) :
     }
 
     fun onTabReselected(
-            listener: suspend CoroutineScope.(android.support.design.widget.TabLayout.Tab?) -> Unit
+            listener: suspend CoroutineScope.(com.google.android.material.tabs.TabLayout.Tab?) -> Unit
     ) {
         _onTabReselected = listener
     }
 
-}fun android.support.design.widget.BottomNavigationView.onNavigationItemSelected(
+}fun com.google.android.material.bottomnavigation.BottomNavigationView.onNavigationItemSelected(
         context: CoroutineContext = Dispatchers.Main,
         returnValue: Boolean = false,
         handler: suspend CoroutineScope.(item: android.view.MenuItem?) -> Unit
@@ -92,7 +88,7 @@ class __TabLayout_OnTabSelectedListener(private val context: CoroutineContext) :
     }
 }
 
-fun android.support.design.widget.CoordinatorLayout.onHierarchyChangeListener(
+fun androidx.coordinatorlayout.widget.CoordinatorLayout.onHierarchyChangeListener(
         context: CoroutineContext = Dispatchers.Main,
         init: __ViewGroup_OnHierarchyChangeListener.() -> Unit
 ) {
