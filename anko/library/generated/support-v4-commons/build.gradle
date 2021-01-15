@@ -3,5 +3,5 @@ apply from: '../../library.gradle'
 dependencies {
     api "androidx.legacy:legacy-support-v4:$ANDROIDX_VERSION"
     api project(':generated:anko-commons')
-    api project(':static:supportV4-base')
+    api project(':static:support-v4-base')
 }

@@ -6,7 +6,7 @@ buildscript {
     ext.kotlinx_dom_version = '0.0.10'
     ext.kotlinx_coroutines_version = '1.0.0'
 
-    ext.ANKO_VERSION = '0.10.9-test'
+    ext.ANKO_VERSION = 'androidx-0.10.8.1'
     ext.ANKO_VERSION_CODE = 106
 
     ext.COMPILE_SDK_VERSION = 28
@@ -125,8 +125,8 @@ def publishedArtifacts = [
     ':static:platform-base',
     ':static:sqlite-base',
     ':static:design-base',
-    ':static:supportV4-base',
-    ':static:appcompatV7-base',
+    ':static:support-v4-base',
+    ':static:appcompat-v7-base',
     ':static:constraint-layout-base'
 ]
 

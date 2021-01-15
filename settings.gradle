@@ -7,8 +7,8 @@ include ':static:commons-base'
 include ':static:platform-base'
 include ':static:sqlite-base'
 include ':static:design-base'
-include ':static:supportV4-base'
-include ':static:appcompatV7-base'
+include ':static:support-v4-base'
+include ':static:appcompat-v7-base'
 include ':static:constraint-layout-base'
 
 include ':generated'
@@ -72,8 +72,8 @@ project(':static:commons-base').projectDir = new File(rootDir, 'anko/library/sta
 project(':static:platform-base').projectDir = new File(rootDir, 'anko/library/static/platform')
 project(':static:sqlite-base').projectDir = new File(rootDir, 'anko/library/static/sqlite')
 project(':static:design-base').projectDir = new File(rootDir, 'anko/library/static/design')
-project(':static:supportV4-base').projectDir = new File(rootDir, 'anko/library/static/supportV4')
-project(':static:appcompatV7-base').projectDir = new File(rootDir, 'anko/library/static/appcompatV7')
+project(':static:support-v4-base').projectDir = new File(rootDir, 'anko/library/static/supportV4')
+project(':static:appcompat-v7-base').projectDir = new File(rootDir, 'anko/library/static/appcompatV7')
 project(':static:constraint-layout-base').projectDir = new File(rootDir, 'anko/library/static/constraint-layout')
 
 project(':generated').projectDir = new File(rootDir, 'anko/library/generated')
