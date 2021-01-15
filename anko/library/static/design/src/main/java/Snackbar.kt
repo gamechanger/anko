@@ -18,9 +18,9 @@
 @file:Suppress("NOTHING_TO_INLINE")
 package org.jetbrains.anko.design
 
-import android.support.annotation.StringRes
-import android.support.design.widget.Snackbar
 import android.view.View
+import androidx.annotation.StringRes
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Display the Snackbar with the [Snackbar.LENGTH_SHORT] duration.

@@ -4,20 +4,13 @@ package org.jetbrains.anko.appcompat.v7
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.support.v7.view.menu.ListMenuItemView
 import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.support.v7.widget.ActionBarContainer
-import android.support.v7.widget.ActionBarOverlayLayout
-import android.support.v7.widget.ActionMenuView
-import android.support.v7.widget.LinearLayoutCompat
-import android.support.v7.widget.AlertDialogLayout
-import android.support.v7.widget.ButtonBarLayout
-import android.support.v7.widget.ScrollingTabContainerView
-import android.support.v7.widget.Toolbar
-import android.support.v7.app.ActionBar
+import android.widget.LinearLayout
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.view.menu.ListMenuItemView
+import androidx.appcompat.widget.*
 
 open class _ListMenuItemView(ctx: Context, attrs: AttributeSet?): ListMenuItemView(ctx, null) {
 
@@ -1000,8 +993,8 @@ open class _Toolbar(ctx: Context): Toolbar(ctx) {
     }
 
     inline fun <T: View> T.lparams(
-            source: ActionBar.LayoutParams?,
-            init: Toolbar.LayoutParams.() -> Unit
+        source: ActionBar.LayoutParams?,
+        init: Toolbar.LayoutParams.() -> Unit
     ): T {
         val layoutParams = Toolbar.LayoutParams(source!!)
         layoutParams.init()

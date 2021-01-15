@@ -17,10 +17,10 @@
 
 package org.jetbrains.anko.constraint.layout
 
-import android.support.annotation.IdRes
 import android.support.constraint.ConstraintLayout
 import android.support.constraint.ConstraintSet
 import android.view.View
+import androidx.annotation.IdRes
 import org.jetbrains.anko.constraint.layout.ConstraintSetBuilder.Connection.BasicConnection
 import org.jetbrains.anko.constraint.layout.ConstraintSetBuilder.Side
 import org.jetbrains.anko.internals.AnkoInternals

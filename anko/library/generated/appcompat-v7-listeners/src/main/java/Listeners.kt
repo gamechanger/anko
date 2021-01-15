@@ -2,33 +2,33 @@
 package org.jetbrains.anko.appcompat.v7.listeners
 
 
-inline fun android.support.v7.widget.ActionMenuView.onMenuItemClick(noinline l: (item: android.view.MenuItem?) -> Boolean) {
+inline fun androidx.appcompat.widget.ActionMenuView.onMenuItemClick(noinline l: (item: android.view.MenuItem?) -> Boolean) {
     setOnMenuItemClickListener(l)
 }
 
-inline fun android.support.v7.widget.ActivityChooserView.onDismiss(noinline l: () -> Unit) {
+inline fun androidx.appcompat.widget.ActivityChooserView.onDismiss(noinline l: () -> Unit) {
     setOnDismissListener(l)
 }
 
-inline fun android.support.v7.widget.FitWindowsFrameLayout.onFitSystemWindows(noinline l: (insets: android.graphics.Rect?) -> Unit) {
+inline fun androidx.appcompat.widget.FitWindowsFrameLayout.onFitSystemWindows(noinline l: (insets: android.graphics.Rect?) -> Unit) {
     setOnFitSystemWindowsListener(l)
 }
 
-inline fun android.support.v7.widget.SearchView.onClose(noinline l: () -> Boolean) {
+inline fun androidx.appcompat.widget.SearchView.onClose(noinline l: () -> Boolean) {
     setOnCloseListener(l)
 }
 
-inline fun android.support.v7.widget.SearchView.onQueryTextFocusChange(noinline l: (v: android.view.View, hasFocus: Boolean) -> Unit) {
+inline fun androidx.appcompat.widget.SearchView.onQueryTextFocusChange(noinline l: (v: android.view.View, hasFocus: Boolean) -> Unit) {
     setOnQueryTextFocusChangeListener(l)
 }
 
-fun android.support.v7.widget.SearchView.onQueryTextListener(init: __SearchView_OnQueryTextListener.() -> Unit) {
+fun androidx.appcompat.widget.SearchView.onQueryTextListener(init: __SearchView_OnQueryTextListener.() -> Unit) {
     val listener = __SearchView_OnQueryTextListener()
     listener.init()
     setOnQueryTextListener(listener)
 }
 
-class __SearchView_OnQueryTextListener : android.support.v7.widget.SearchView.OnQueryTextListener {
+class __SearchView_OnQueryTextListener : androidx.appcompat.widget.SearchView.OnQueryTextListener {
 
     private var _onQueryTextSubmit: ((String?) -> Boolean)? = null
 
@@ -48,17 +48,17 @@ class __SearchView_OnQueryTextListener : android.support.v7.widget.SearchView.On
 
 }
 
-inline fun android.support.v7.widget.SearchView.onSearchClick(noinline l: (v: android.view.View?) -> Unit) {
+inline fun androidx.appcompat.widget.SearchView.onSearchClick(noinline l: (v: android.view.View?) -> Unit) {
     setOnSearchClickListener(l)
 }
 
-fun android.support.v7.widget.SearchView.onSuggestionListener(init: __SearchView_OnSuggestionListener.() -> Unit) {
+fun androidx.appcompat.widget.SearchView.onSuggestionListener(init: __SearchView_OnSuggestionListener.() -> Unit) {
     val listener = __SearchView_OnSuggestionListener()
     listener.init()
     setOnSuggestionListener(listener)
 }
 
-class __SearchView_OnSuggestionListener : android.support.v7.widget.SearchView.OnSuggestionListener {
+class __SearchView_OnSuggestionListener : androidx.appcompat.widget.SearchView.OnSuggestionListener {
 
     private var _onSuggestionSelect: ((Int) -> Boolean)? = null
 
@@ -78,11 +78,11 @@ class __SearchView_OnSuggestionListener : android.support.v7.widget.SearchView.O
 
 }
 
-inline fun android.support.v7.widget.Toolbar.onMenuItemClick(noinline l: (item: android.view.MenuItem?) -> Boolean) {
+inline fun androidx.appcompat.widget.Toolbar.onMenuItemClick(noinline l: (item: android.view.MenuItem?) -> Boolean) {
     setOnMenuItemClickListener(l)
 }
 
-inline fun android.support.v7.widget.ViewStubCompat.onInflate(noinline l: (stub: android.support.v7.widget.ViewStubCompat?, inflated: android.view.View?) -> Unit) {
+inline fun androidx.appcompat.widget.ViewStubCompat.onInflate(noinline l: (stub: androidx.appcompat.widget.ViewStubCompat?, inflated: android.view.View?) -> Unit) {
     setOnInflateListener(l)
 }
 

@@ -4,10 +4,10 @@ package org.jetbrains.anko.cardview.v7
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.support.v7.widget.CardView
-import android.view.View
+import androidx.cardview.widget.CardView
 
 open class _CardView(ctx: Context): CardView(ctx) {
 

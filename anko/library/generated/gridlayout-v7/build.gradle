@@ -1,6 +1,6 @@
 apply from: '../../library.gradle'
 
 dependencies {
-    api "com.android.support:gridlayout-v7:$SUPPORT_ARTIFACT_VERSION"
+    api "androidx.gridlayout:gridlayout:$ANDROIDX_VERSION"
     api project(':generated:anko-commons')
 }

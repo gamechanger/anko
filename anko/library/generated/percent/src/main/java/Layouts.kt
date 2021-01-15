@@ -4,11 +4,11 @@ package org.jetbrains.anko.percent
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.support.percent.PercentFrameLayout
-import android.view.View
-import android.support.percent.PercentRelativeLayout
+import androidx.percentlayout.widget.PercentFrameLayout
+import androidx.percentlayout.widget.PercentRelativeLayout
 
 open class _PercentFrameLayout(ctx: Context): PercentFrameLayout(ctx) {
 

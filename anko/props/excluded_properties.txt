@@ -1,4 +1,4 @@
-android.support.v4.view.PagerTabStrip#*
+androidx.viewpager.widget.PagerTabStrip#*
 android.app.MediaRouteButton#*
 android.appwidget.AppWidgetHostView#*
 android.gesture.GestureOverlayView#*

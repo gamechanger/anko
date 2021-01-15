@@ -3,13 +3,9 @@ package org.jetbrains.anko.appcompat.v7.coroutines
 
 
 import kotlin.coroutines.CoroutineContext
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.CoroutineStart
+import kotlinx.coroutines.*
 
-fun android.support.v7.widget.ActionMenuView.onMenuItemClick(
+fun androidx.appcompat.widget.ActionMenuView.onMenuItemClick(
         context: CoroutineContext = Dispatchers.Main,
         returnValue: Boolean = false,
         handler: suspend CoroutineScope.(item: android.view.MenuItem?) -> Unit
@@ -22,7 +18,7 @@ fun android.support.v7.widget.ActionMenuView.onMenuItemClick(
     }
 }
 
-fun android.support.v7.widget.ActivityChooserView.onDismiss(
+fun androidx.appcompat.widget.ActivityChooserView.onDismiss(
         context: CoroutineContext = Dispatchers.Main,
         handler: suspend CoroutineScope.() -> Unit
 ) {
@@ -31,7 +27,7 @@ fun android.support.v7.widget.ActivityChooserView.onDismiss(
     }
 }
 
-fun android.support.v7.widget.FitWindowsFrameLayout.onFitSystemWindows(
+fun androidx.appcompat.widget.FitWindowsFrameLayout.onFitSystemWindows(
         context: CoroutineContext = Dispatchers.Main,
         handler: suspend CoroutineScope.(insets: android.graphics.Rect?) -> Unit
 ) {
@@ -42,7 +38,7 @@ fun android.support.v7.widget.FitWindowsFrameLayout.onFitSystemWindows(
     }
 }
 
-fun android.support.v7.widget.SearchView.onClose(
+fun androidx.appcompat.widget.SearchView.onClose(
         context: CoroutineContext = Dispatchers.Main,
         returnValue: Boolean = false,
         handler: suspend CoroutineScope.() -> Unit
@@ -53,7 +49,7 @@ fun android.support.v7.widget.SearchView.onClose(
     }
 }
 
-fun android.support.v7.widget.SearchView.onQueryTextFocusChange(
+fun androidx.appcompat.widget.SearchView.onQueryTextFocusChange(
         context: CoroutineContext = Dispatchers.Main,
         handler: suspend CoroutineScope.(v: android.view.View, hasFocus: Boolean) -> Unit
 ) {
@@ -64,7 +60,7 @@ fun android.support.v7.widget.SearchView.onQueryTextFocusChange(
     }
 }
 
-fun android.support.v7.widget.SearchView.onQueryTextListener(
+fun androidx.appcompat.widget.SearchView.onQueryTextListener(
         context: CoroutineContext = Dispatchers.Main,
         init: __SearchView_OnQueryTextListener.() -> Unit
 ) {
@@ -73,7 +69,7 @@ fun android.support.v7.widget.SearchView.onQueryTextListener(
     setOnQueryTextListener(listener)
 }
 
-class __SearchView_OnQueryTextListener(private val context: CoroutineContext) : android.support.v7.widget.SearchView.OnQueryTextListener {
+class __SearchView_OnQueryTextListener(private val context: CoroutineContext) : androidx.appcompat.widget.SearchView.OnQueryTextListener {
 
     private var _onQueryTextSubmit: (suspend CoroutineScope.(String?) -> Boolean)? = null
     private var _onQueryTextSubmit_returnValue: Boolean = false
@@ -115,7 +111,7 @@ class __SearchView_OnQueryTextListener(private val context: CoroutineContext) : 
         _onQueryTextChange_returnValue = returnValue
     }
 
-}fun android.support.v7.widget.SearchView.onSearchClick(
+}fun androidx.appcompat.widget.SearchView.onSearchClick(
         context: CoroutineContext = Dispatchers.Main,
         handler: suspend CoroutineScope.(v: android.view.View?) -> Unit
 ) {
@@ -126,7 +122,7 @@ class __SearchView_OnQueryTextListener(private val context: CoroutineContext) : 
     }
 }
 
-fun android.support.v7.widget.SearchView.onSuggestionListener(
+fun androidx.appcompat.widget.SearchView.onSuggestionListener(
         context: CoroutineContext = Dispatchers.Main,
         init: __SearchView_OnSuggestionListener.() -> Unit
 ) {
@@ -135,7 +131,7 @@ fun android.support.v7.widget.SearchView.onSuggestionListener(
     setOnSuggestionListener(listener)
 }
 
-class __SearchView_OnSuggestionListener(private val context: CoroutineContext) : android.support.v7.widget.SearchView.OnSuggestionListener {
+class __SearchView_OnSuggestionListener(private val context: CoroutineContext) : androidx.appcompat.widget.SearchView.OnSuggestionListener {
 
     private var _onSuggestionSelect: (suspend CoroutineScope.(Int) -> Boolean)? = null
     private var _onSuggestionSelect_returnValue: Boolean = false
@@ -177,7 +173,7 @@ class __SearchView_OnSuggestionListener(private val context: CoroutineContext) :
         _onSuggestionClick_returnValue = returnValue
     }
 
-}fun android.support.v7.widget.Toolbar.onMenuItemClick(
+}fun androidx.appcompat.widget.Toolbar.onMenuItemClick(
         context: CoroutineContext = Dispatchers.Main,
         returnValue: Boolean = false,
         handler: suspend CoroutineScope.(item: android.view.MenuItem?) -> Unit
@@ -190,9 +186,9 @@ class __SearchView_OnSuggestionListener(private val context: CoroutineContext) :
     }
 }
 
-fun android.support.v7.widget.ViewStubCompat.onInflate(
+fun androidx.appcompat.widget.ViewStubCompat.onInflate(
         context: CoroutineContext = Dispatchers.Main,
-        handler: suspend CoroutineScope.(stub: android.support.v7.widget.ViewStubCompat?, inflated: android.view.View?) -> Unit
+        handler: suspend CoroutineScope.(stub: androidx.appcompat.widget.ViewStubCompat?, inflated: android.view.View?) -> Unit
 ) {
     setOnInflateListener { stub, inflated ->
         GlobalScope.launch(context, CoroutineStart.DEFAULT) {
