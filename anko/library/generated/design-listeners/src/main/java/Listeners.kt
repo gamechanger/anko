@@ -1,9 +1,11 @@
 @file:JvmName("DesignListenersListenersKt")
 package org.jetbrains.anko.design.listeners
 
+import com.google.android.material.appbar.AppBarLayout
 
-inline fun com.google.android.material.appbar.AppBarLayout.onOffsetChanged(noinline l: (appBarLayout: com.google.android.material.appbar.AppBarLayout?, verticalOffset: Int) -> Unit) {
-    addOnOffsetChangedListener(l)
+
+inline fun com.google.android.material.appbar.AppBarLayout.onOffsetChanged(noinline l: (appBarLayout: com.google.android.material.appbar.AppBarLayout, verticalOffset: Int) -> Unit) {
+    addOnOffsetChangedListener(l as AppBarLayout.OnOffsetChangedListener)
 }
 
 fun com.google.android.material.tabs.TabLayout.onTabSelectedListener(init: __TabLayout_OnTabSelectedListener.() -> Unit) {

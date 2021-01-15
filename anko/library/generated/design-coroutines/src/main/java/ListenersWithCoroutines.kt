@@ -9,11 +9,11 @@ fun com.google.android.material.appbar.AppBarLayout.onOffsetChanged(
         context: CoroutineContext = Dispatchers.Main,
         handler: suspend CoroutineScope.(appBarLayout: com.google.android.material.appbar.AppBarLayout?, verticalOffset: Int) -> Unit
 ) {
-    addOnOffsetChangedListener { appBarLayout, verticalOffset ->
+    addOnOffsetChangedListener({ appBarLayout: com.google.android.material.appbar.AppBarLayout, verticalOffset: Int ->
         GlobalScope.launch(context, CoroutineStart.DEFAULT) {
             handler(appBarLayout, verticalOffset)
         }
-    }
+    } as com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener)
 }
 
 fun com.google.android.material.tabs.TabLayout.onTabSelectedListener(
