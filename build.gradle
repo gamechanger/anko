@@ -6,13 +6,13 @@ buildscript {
     ext.kotlinx_dom_version = '0.0.10'
     ext.kotlinx_coroutines_version = '1.0.0'
 
-    ext.ANKO_VERSION = '0.10.8'
+    ext.ANKO_VERSION = '0.10.9-test'
     ext.ANKO_VERSION_CODE = 106
 
     ext.COMPILE_SDK_VERSION = 28
     ext.MIN_SDK_VERSION = 15
     ext.TARGET_SDK_VERSION = 28
-    ext.SUPPORT_ARTIFACT_VERSION = "27.1.1"
+    ext.ANDROIDX_VERSION = "1.0.0"
     ext.CONSTRAINT_LAYOUT_ARTIFACT_VERSION = "1.1.2"
 
     ext.PROJECT_URL = 'https://github.com/JetBrains/anko'
